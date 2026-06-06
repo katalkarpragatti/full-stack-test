@@ -1,0 +1,483 @@
+:root {
+    /* ==========================================
+1. FONT FAMILIES
+========================================== */
+    --font-body: 'Open Sans', sans-serif;
+    --font-heading: 'Titillium Web', sans-serif;
+
+    /* ==========================================
+2. FONT WEIGHTS
+========================================== */
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    --font-extrabold: 800;
+    --font-ultrabold: 900;
+
+    /* ==========================================
+3. PARAGRAPH MARGIN BOTTOM (P bottom mar)
+========================================== */
+    --p-none: 0;
+    --p-small-gap: 0.5rem;
+    --p-medium-gap: 0.75rem;
+    --p-large-gap: 1rem;
+
+    /* ==========================================
+4. BORDER RADIUS
+========================================== */
+    --br-3: 3px;
+    --br-5: 5px;
+    --br-6: 6px;
+    --br-10: 10px;
+    --br-50: 50%;
+
+    /* ==========================================
+5. COLORS & BACKGROUNDS (Color Pallet)
+========================================== */
+    /* Brand Pallet Colors */
+    --brand-primary: #c4351e;
+    --brand-secondary: #11324d;
+    --brand-third: #f0b91e;
+    --brand-fourth: #64b4c8;
+    --brand-fifth: #504682;
+    --brand-sixth: #2fb1fc;
+
+    /* Functional Feedback Colors */
+    --brand-success: #56bd5b;
+    --brand-info: #0099fa;
+    --brand-warning: #f7b422;
+    --brand-danger: #e34c4c;
+    --brand-black: #000000;
+    --brand-white: #ffffff;
+
+    /* Grayscale Pallet Colors */
+    --gray-darker: #2e3439;
+    /* Headings */
+    --gray-dark: #424242;
+    /* Paragraphs */
+    --gray: #696969;
+    /* Secondary Text */
+    --gray-light: #adadad;
+    /* Disabled Text */
+    --gray-lighter: #d4d3d8;
+    /* Borders */
+    --gray-white: #f6f6f6;
+    /* Lightest background */
+
+    /* ==========================================
+6. GAPS & PADDING VALUES (Tokens)
+========================================== */
+    --gap-1: 5px;
+    --gap-2: 10px;
+    --gap-3: 15px;
+    --gap-4: 20px;
+    --gap-5: 25px;
+    --gap-6: 30px;
+    --gap-7: 40px;
+    --gap-8: 50px;
+    --gap-9: 60px;
+    --gap-10: 70px;
+
+    --pad-1: 5px;
+    --pad-2: 10px;
+    --pad-3: 12px;
+    --pad-4: 15px;
+    --pad-5: 20px;
+    --pad-6: 25px;
+    --pad-7: 30px;
+    --pad-8: 40px;
+    --pad-9: 50px;
+    --pad-10: 60px;
+
+    /* ==========================================
+7. TYPOGRAPHY SYSTEM (Desktop Defaults)
+========================================== */
+    --fs-smallest: 12px;
+    --lh-smallest: 1.5;
+    --fs-smaller: 13px;
+    --lh-smaller: 1.5;
+    --fs-small: 14px;
+    --lh-small: 1.625;
+    --fs-base: 16px;
+    --lh-base: 1.625;
+    /* P */
+    --fs-big: 18px;
+    --lh-big: 1.625;
+    /* H6 */
+    --fs-large: 20px;
+    --lh-large: 1.4;
+    /* H5 */
+    --fs-larger: 24px;
+    --lh-larger: 1.3;
+    /* H4 */
+    --fs-largest: 28px;
+    --lh-largest: 1.3;
+    /* H3 */
+    --fs-huge: 34px;
+    --lh-huge: 1.3;
+    /* H2 */
+    --fs-jumbo: 40px;
+    --lh-jumbo: 1.2;
+    /* H1 */
+    --fs-giant: 64px;
+    --lh-giant: 1.1;
+}
+
+/* Responsive Font Sizes (Tablet & Mobile Scale updates) */
+@media (max-width: 991px) {
+    :root {
+        --fs-smallest: 11px;
+        --fs-smaller: 12px;
+        --fs-small: 13px;
+        --fs-base: 14px;
+        /* P */
+        --fs-big: 16px;
+        /* H6 */
+        --fs-large: 18px;
+        /* H5 */
+        --fs-larger: 20px;
+        /* H4 */
+        --fs-largest: 24px;
+        /* H3 */
+        --fs-huge: 28px;
+        /* H2 */
+        --fs-jumbo: 30px;
+        /* H1 */
+        --fs-giant: 36px;
+    }
+}
+
+
+/* Base Document Styles */
+body {
+    font-family: var(--font-body);
+    background-color: var(--brand-secondary);
+    /* #11324d */
+    color: var(--brand-white);
+    font-size: var(--fs-base);
+    line-height: var(--lh-base);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Headings Classifications */
+h1,
+.h1 {
+    font-family: var(--font-heading);
+    font-size: var(--fs-jumbo);
+    line-height: var(--lh-jumbo);
+    font-weight: var(--font-semibold);
+    color: var(--brand-white);
+}
+
+h2,
+.h2 {
+    font-family: var(--font-heading);
+    font-size: var(--fs-huge);
+    line-height: var(--lh-huge);
+    font-weight: var(--font-semibold);
+}
+
+h3,
+.h3 {
+    font-family: var(--font-heading);
+    font-size: var(--fs-largest);
+    line-height: var(--lh-largest);
+    font-weight: var(--font-medium);
+}
+
+h4,
+.h4 {
+    font-family: var(--font-heading);
+    font-size: var(--fs-larger);
+    line-height: var(--lh-larger);
+}
+
+h5,
+.h5 {
+    font-family: var(--font-heading);
+    font-size: var(--fs-large);
+    line-height: var(--lh-large);
+}
+
+h6,
+.h6 {
+    font-family: var(--font-heading);
+    font-size: var(--fs-big);
+    line-height: var(--lh-big);
+}
+
+p {
+    margin-bottom: var(--p-large-gap);
+    /* Default 1rem bottom margin */
+    color: var(--gray-dark);
+    /* Paragraph gray */
+}
+
+/* Showcase Component Frame Layout Update */
+.showcase-container {
+    background: var(--brand-white);
+    border-radius: var(--br-6);
+    /* 6px border radius */
+    overflow: visible;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.showcase-wrapper {
+    width: 100%;
+    padding: 4rem 0;
+}
+
+.header-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.header-section h1 {
+    font-size: var(--fs-jumbo);
+    ;
+    font-weight: var(--font-light);
+    margin-bottom: var(--p-medium-gap);
+    ;
+}
+
+.header-section p {
+    color: var(--gray);
+    font-size: var(--fs-base);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+/* Column 1: Tabs */
+.tab-navigation-pane {
+    background-color: var(--gray-white);
+    padding: var(--pad-6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tab-nav-item {
+    background-color: var(--brand-white);
+    border: 1px solid var(--gray-lighter);
+    border-radius: var(--br-5);
+    padding: var(--pad-4) var(--pad-5);
+    color: var(--gray-darker);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--p-large-gap);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    position: relative;
+}
+
+.tab-nav-item:last-child {
+    margin-bottom: var(--p-none);
+    ;
+}
+
+.tab-nav-item svg {
+    width: 42px;
+    height: 42px;
+    margin-right: var(--p-large-gap);
+    color: var(--brand-primary);
+}
+
+.tab-nav-item.active {
+    color: var(--brand-black);
+    box-shadow: 0 8px 20px rgba(87, 54, 54, 0.08);
+    border-color: transparent;
+}
+
+/* Custom connection pointer arrow */
+@media (min-width: 992px) {
+    .tab-nav-item.active::after {
+        content: "";
+        position: absolute;
+        right: -26px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 12px solid var(--brand-fourth);
+        z-index: 10;
+        pointer-events: none;
+    }
+}
+
+/* Column 2: Content Slider Container */
+.content-slider-column {
+    background-color: var(--brand-fourth);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    overflow: hidden;
+    min-height: 440px;
+}
+
+.slide-text-item {
+    padding: var(--pad-8) var(--pad-6);
+    text-align: center;
+    outline: none;
+}
+
+.badge-pill {
+    background-color: rgba(255, 255, 255, 0.22);
+    font-weight: var(--font-semibold);
+    font-size: var(--fs-smallest);
+    letter-spacing: 0.05em;
+    padding: 6px 14px;
+    border-radius: var(--br-3);
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: var(--p-large-gap);
+}
+
+.slide-title {
+    font-size: var(--fs-largest);
+    font-weight: var(--font-medium);
+    line-height: var(--lh-larger);
+    max-width: 400px;
+    margin: 0 auto 2rem auto;
+    color: var(--brand-white);
+    margin-bottom: var(--gap-4);
+}
+
+.learn-more-btn {
+    color: var(--brand-white);
+    text-decoration: none;
+    font-weight: var(--font-medium);
+    ;
+    font-size: var(--fs-large);
+    ;
+    transition: opacity 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--gap-6);
+}
+
+.learn-more-btn:hover {
+    opacity: 0.8;
+    color: var(--brand-white);
+}
+
+/* Slide dots customization */
+.slick-dots li button:before {
+    color: var(--brand-white) !important;
+    opacity: 0.35 !important;
+    font-size: 35px !important;
+}
+
+.slick-dots li.slick-active button:before {
+    color: var(--brand-white) !important;
+    opacity: 1 !important;
+}
+
+/* Column 3: Picture Slider Container */
+.image-slider-column {
+    padding: 0;
+    overflow: hidden;
+    min-height: 440px;
+}
+
+.slide-image-item {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    outline: none;
+    display: block;
+}
+
+/* Mobile View Accordion Overrides */
+@media (max-width: 991px) {
+    .mobile-accordion-section {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .accordion-item {
+        border: none;
+        background-color: transparent;
+        margin-bottom: var(--p-large-gap);
+        ;
+    }
+
+    .accordion-button {
+        background-color: var(--brand-white) !important;
+        color: var(--gray-darker) !important;
+        font-weight: var(--font-medium);
+        padding: var(--pad-5);
+        border-radius: var(--br-5) !important;
+        display: flex;
+        align-items: center;
+        box-shadow: none !important;
+    }
+
+    .accordion-button::after {
+        display: none;
+        /* Hide default icon */
+    }
+
+    /* Custom Icon Indicators matching the spec */
+    .accordion-indicator {
+        font-size: var(--fs-larger);
+        margin-left: auto;
+        color: var(--brand-primary);
+        font-weight: var(--font-bold);
+        line-height: var(--lh-giant);
+    }
+
+    .accordion-button svg {
+        width: 36px;
+        height: 36px;
+        margin-right: 1.25rem;
+        color: var(--brand-danger);
+    }
+
+    .accordion-body {
+        padding: 0;
+        border-radius: 4px;
+        overflow: hidden;
+        margin-top: 0.5rem;
+    }
+
+    /* Mobile hybrid view: Content slider with 1:1 image mapped as slide background */
+    .mobile-slider-wrap {
+        background-color: var(--brand-fourth);
+        position: relative;
+    }
+
+    .mobile-slide-item {
+        position: relative;
+        padding: 4rem 2rem;
+        text-align: center;
+        background-size: cover !important;
+        background-position: center !important;
+        min-height: 400px;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 1;
+        outline: none;
+    }
+
+    .mobile-slide-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(100, 180, 200, 0.88);
+        /* Overlay backfill matching design */
+        z-index: -1;
+    }
+}
